@@ -1,0 +1,125 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Intelligent Cervical Cancer Screening</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Intelligent Cervical Cancer Screening</h1>
+
+        <p>
+            Upload a colposcopy image for AI-based screening analysis.
+        </p>
+
+        <!-- Upload Section -->
+        <div class="upload-box">
+
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/*"
+            >
+
+            <button
+                id="analyzeBtn"
+                type="button"
+            >
+                Analyze Image
+            </button>
+
+        </div>
+
+        <!-- Image Preview -->
+        <div id="preview"></div>
+
+
+        <!-- Analysis Result -->
+        <div id="result">
+
+            <h2>Analysis Result</h2>
+
+
+            <!-- Card 1 -->
+            <div class="result-card">
+
+                <h3>Image Quality</h3>
+
+                <p id="qualityText">
+                    Waiting for analysis
+                </p>
+
+            </div>
+
+
+            <!-- Card 2 -->
+            <div class="result-card">
+
+                <h3>AI Screening Result</h3>
+
+                <p id="resultText">
+                    Upload an image and click Analyze Image.
+                </p>
+
+            </div>
+
+
+            <!-- Card 3 -->
+            <div class="result-card">
+
+                <h3>Confidence Score</h3>
+
+                <p id="confidenceText">
+                    Not available
+                </p>
+
+            </div>
+
+
+            <!-- Card 4 -->
+            <div class="result-card">
+
+                <h3>Lesion Analysis</h3>
+
+                <p id="lesionText">
+                    Not available from the current model.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+
+            <p>
+                <strong>Disclaimer:</strong>
+                This AI-based screening result is intended for
+                educational and research demonstration only.
+                It is not a medical diagnosis. Please consult a
+                qualified healthcare professional for clinical evaluation.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
+```
+
